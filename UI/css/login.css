@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+h1 {
+    margin-top: 75px;
+    text-align: center;
+}
+
+p {
+    padding: 8px 12px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.login-panel {
+    font-family: Interstate, Arial, sans-serif;
+    max-width: 350px;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.form-fields {
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.field-descriptor {
+    width: 100%;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+input[type="email"], input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    border: solid 1px #d6d6d6;
+    height: 40px;
+    font-size: 14px;
+}
+
+.login-remember_me {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.the-checkbox {
+    font-size: 14px;
+}
+
+.the-checkbox{
+    position: relative;
+    top: -1px;
+}
+
+button {
+    font-size: 14px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 8px 15px;
+    background-color: #54bbff;
+    border-color: #54bbff;
+    color: white;
+}
+
+.offer-signup{
+    margin-top: 5px;
+    margin-bottom: 50px;
+    align-self: center;
+    display: flex;
+    font-size: 15px;
+}
+
+.given-signup{
+    color: #59bcfc;
+    text-decoration: none;
+}
