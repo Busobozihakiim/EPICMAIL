@@ -96,8 +96,6 @@ p {
 label{
     font-size: 17px;
     margin-top: 5px;
-    font-weight: bold;
-    color: mintcream;
 }
 input[type="text"], input[type="email"], input[type="password"] {
     margin:0px;

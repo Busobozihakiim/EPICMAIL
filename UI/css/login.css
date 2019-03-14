@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    color:snow;
     font-weight: bold;
 }
 
@@ -13,7 +12,7 @@ body {
 h1 {
     margin-top: 75px;
     text-align: center;
-    color: blue;
+    color: #54bbff;
     font-weight: lighter;
 }
 
@@ -89,6 +88,6 @@ button {
 }
 
 .given-signup{
-    color: #59bcfc;
+    color: #dc3500;
     text-decoration: none;
 }
