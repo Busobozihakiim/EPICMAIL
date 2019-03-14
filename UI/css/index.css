@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    margin: 0px;
+    padding: 1px 0px 1px 0px;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+.logo {
+    font-size: 30px;
+}
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #54bbff;
+}
+
+.signup-container {
+    padding: 10px 20px 30px;
+}
+
+.info {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 600;
+    color: #111
+}
+
+p {
+    font-weight: 500;
+    line-height: 27px;
+    width: 88%;
+    margin: 11px auto 13px auto;
+    font-size: 18px;
+    text-align: center;
+    color: mintcream;
+}
+
+.signup-form{
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+}
+.form-wrapper{
+    margin:auto;
+    margin-top: 30px;
+    max-width: 425px;
+}
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-right: -25px;
+}
+
+.input-box {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 150px;
+    margin: 0 25px 15px 0;
+}
+label{
+    font-size: 17px;
+    margin-top: 5px;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    margin:0px;
+    border: 1px solid #D6DADE;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px 5px 10px 20px;
+    width: 100%;
+    font-size: 14px;
+}
+button {
+    color: #FFF;
+    background-color: #0691F2;
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none
+}
