@@ -21,6 +21,8 @@ p {
     width: 100%;
     text-align: center;
     margin: auto;
+    font-size: 14px;
+
 }
 
 .login-panel {
@@ -90,4 +92,12 @@ button {
 .given-signup{
     color: #dc3500;
     text-decoration: none;
+}
+
+.cancel-reset {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 10px;
+    color: red;
+    text-decoration: none
 }
