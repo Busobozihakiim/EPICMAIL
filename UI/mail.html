@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/user.css">
+        <link rel="stylesheet" type="text/css" href="css/mail.css">
+    </head>
+    <body style="background: url(image/Quepal.jpg); background-size:cover">
+        <div class="wrapper">
+            <header class="header">
+                <ul class="topnav">
+                    <li class="logo"><a href="#">EpicMail</a></li>
+                    <li class="active"><a href="login.html">Login</a></li>
+                </ul>
+            </header>
+            <aside class="sidebar">    
+                <ul class="sidenav">
+                    <li><a href="#write">Send</a></li>
+                    <li><a class="active" href="user.html">Inbox</a></li>
+                    <li><a href="#sent">Sent</a></li>
+                    <li><a href="#drafts">Drafts</a></li>
+                </ul>
+            </aside>
+            <article class="content" id="plainmail">
+                <form action="#">
+                    <div id="area">
+                    <table>
+                        <tr>
+                            <th>From</th>
+                            <th>Subject</th>
+                            <th>Date</th>
+                        </tr>
+                        <tr class="link" >
+                            <td>john@home.com</td>
+                            <td>Internet bill</td>
+                            <td>05/05/19</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <div class="messo">
+                    <p>
+                    Dear Morty,
+                    </p>
+                    <p>
+                    lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                    lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                    lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                    lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                    lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                                            
+                    Yours,
+                        john
+                    </p>
+                    </div>
+                    <div class="actions">
+                        <button class="reply" onclick="message_pad()">Reply</button>
+                        <button class="delete" onclick="delete_mail()">Delete</button>
+                    </div>
+                    </div>
+                    <div id="reply">
+                        <form method="GET" action="#">
+                            <textarea></textarea>
+                            <div class="actions">
+                                <button class="send" onclick="send()">Send</button>
+                                <button class="drafts" onclick="send()">Drafts</button>
+                            </div>
+                        </form>
+                    </div>
+                </form>
+                <div id="message_deleted" style="display:none">
+                    <p>The message has been deleted</p>
+                </div>
+            </article>
+        </div>  
+    </body>
+    <script>
+        function message_pad() {
+            document.getElementById("reply").style.display = "block"
+        }
+        function send() {
+            document.getElementById("reply").style.display = "none"
+        }
+        function delete_mail() {
+            document.getElementById("area").style.display = "none"
+            document.getElementById("message_deleted").style.display = "block"
+            }
+    </script>
+</html>

@@ -23,11 +23,50 @@
                     <li><a href="#drafts">Drafts</a></li>
                 </ul>
             </aside>
-            <article class="content">
-                <h1>The inbox</h1>
-                <p>This shall house the inbox, outbox,drafts,and mail writing features</p>                
+            <article class="content" id="plainmail">
+                <table>
+                    <tr>
+                        <th>From</th>
+                        <th>Subject</th>
+                        <th>Date</th>
+                    </tr>
+                    <tr class="link" onclick="loadmail()">
+                        <td>john@home.com</td>
+                        <td>Internet bill</td>
+                        <td>05/05/19</td>
+                    </tr>                    
+                    <tr class="link" >
+                        <td>john@home.com</td>
+                        <td>Internet bill</td>
+                        <td>05/05/19</td>
+                    </tr>                    
+                    <tr class="link" >
+                        <td>john@home.com</td>
+                        <td>Internet bill</td>
+                        <td>05/05/19</td>
+                    </tr>
+                    <tr class="link" >
+                        <td>john@home.com</td>
+                        <td>Internet bill</td>
+                        <td>05/05/19</td>
+                    </tr>                    
+                    <tr class="link" >
+                        <td>john@home.com</td>
+                        <td>Internet bill</td>
+                        <td>05/05/19</td>
+                    </tr>                    
+                    <tr class="link" >
+                        <td>john@home.com</td>
+                        <td>Internet bill</td>
+                        <td>05/05/19</td>
+                    </tr>
+                </table>
             </article>
         </div>
-    
+<script>
+    function loadmail (){
+        document.location = 'mail.html';
+    }
+</script>   
 </body>
 </html>
