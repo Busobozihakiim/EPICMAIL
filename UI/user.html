@@ -95,7 +95,7 @@
                         </div>
                         <div class="actions">
                             <button class="reply" onclick="message_pad()">Reply</button>
-                            <button class="delete" onclick="delete_mail()">Delete</button>
+                            <button class="delete" onclick="delete_mail('area','mailInbox')">Delete</button>
                         </div>
                         <div id="reply">
                             <form method="GET" action="#">
@@ -123,7 +123,78 @@
                     </form>
                 </div>
                 <div id="outbox" class="mailcontent">
-                    <p>outbox</p>
+                    <div id="sentMail">
+                        <table>
+                            <tr>
+                                <th>To</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                            </tr>
+                            <tr class="link" onclick="sentMail()">
+                                <td>john@home.com</td>
+                                <td>Internet bill</td>
+                                <td>05/05/19</td>
+                            </tr>                    
+                            <tr class="link" >
+                                <td>lona@flowershop.com</td>
+                                <td>Delivery</td>
+                                <td>06/03/19</td>
+                            </tr>                    
+                            <tr class="link" >
+                                <td>Elliot@lawsociety.com</td>
+                                <td>Invitation to critique party</td>
+                                <td>02/03/19</td>
+                            </tr>
+                            <tr class="link" >
+                                <td>Alderson@redteam.allsafe.com</td>
+                                <td>looking for a R.E</td>
+                                <td>23/02/19</td>
+                            </tr>                    
+                            <tr class="link" >
+                                <td>Global@gardening.com</td>
+                                <td>Gardener Services</td>
+                                <td>20/02/19</td>
+                            </tr>                    
+                            <tr class="link" >
+                                <td>jumia@shop.com</td>
+                                <td>Recuring costs</td>
+                                <td>19/02/19</td>
+                            </tr>
+                        </table>
+                        </div>                
+                        <div id="area2">
+                            <table>
+                                <tr>
+                                    <th>To</th>
+                                    <th>Subject</th>
+                                    <th>Date</th>
+                                </tr>
+                                <tr class="link" >
+                                    <td>john@home.com</td>
+                                    <td>Internet bill</td>
+                                    <td>05/05/19</td>
+                                </tr>
+                            </table>
+                        <br>
+                            <div class="messo">
+                            <p>
+                            Dear John,
+                            </p>
+                            <p>
+                            lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                            lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                            lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                            lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                            lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                                                    
+                            Yours,
+                                Morty
+                            </p>
+                        </div>
+                        <div class="actions">
+                            <button class="delete" onclick="delete_mail('area2','sentMail')">Delete</button>
+                        </div>
+                    </div>
                 </div>
                 <div id="drafts" class="mailcontent">
                     <p>drafts</p>
@@ -158,11 +229,15 @@
         document.getElementById("area").style.display = "none"
         document.getElementById("mailInbox").style.display = "block"
         }
-    function delete_mail() {
-        document.getElementById("area").style.display = "none"
+    function delete_mail(from, to) {
+        document.getElementById(from).style.display = "none"
         alert("Message will be deleted")
-        document.getElementById("mailInbox").style.display = "block"
+        document.getElementById(to).style.display = "block"
         }
+    function sentMail(){
+        document.getElementById("sentMail").style.display = "none"
+        document.getElementById("area2").style.display = "block"            
+    }
     </script>
 </script>   
 </body>
