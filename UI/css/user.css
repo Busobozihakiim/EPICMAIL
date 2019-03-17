@@ -222,7 +222,7 @@ textarea {
     color: black;
     font-size: 150%;
     margin-bottom: 10px;
-    border: solid black;
+    border: 1px solid black;
 }
   
 @supports (display: grid) {
