@@ -111,6 +111,9 @@ td, th {
 
 #area {
     display:none;
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .messo {

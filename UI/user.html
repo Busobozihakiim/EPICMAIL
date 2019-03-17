@@ -107,9 +107,6 @@
                             </form>
                         </div>
                     </div>                    
-                <div id="message_deleted" style="display:none">
-                    <p>The message has been deleted</p>
-                </div>
                 </div>
                 <div id="write-mail" class="mailcontent">
                     <p>compose</p>
@@ -152,7 +149,8 @@
         }
     function delete_mail() {
         document.getElementById("area").style.display = "none"
-        document.getElementById("message_deleted").style.display = "block"
+        alert("Message will be deleted")
+        document.getElementById("mailInbox").style.display = "block"
         }
     </script>
 </script>   
