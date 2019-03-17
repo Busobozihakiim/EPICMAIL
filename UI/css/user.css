@@ -98,11 +98,11 @@ td, th {
     display:none;
 }
 
-#inbox {
+#inbox, #sentMail, #draftMail  {
     display:block;
 }
 
-#area {
+#area, #area2, #area3 {
     display:none;
 }
 
@@ -188,12 +188,8 @@ textarea {
     background-color: white;
 }
 
-#sentMail {
-    display:block;
-}
-
-#area2 {
-    display:none;
+.backbtn {
+    background: rebeccapurple;
 }
 @media screen and (min-width: 500px) {
   

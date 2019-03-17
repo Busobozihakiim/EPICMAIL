@@ -32,7 +32,7 @@
                                 <th>Subject</th>
                                 <th>Date</th>
                             </tr>
-                            <tr class="link" onclick="loadmail()">
+                            <tr class="link" onclick="loadmail('area', 'mailInbox')">
                                 <td>john@home.com</td>
                                 <td>Internet bill</td>
                                 <td>05/05/19</td>
@@ -94,6 +94,7 @@
                         </p>
                         </div>
                         <div class="actions">
+                            <button class="backbtn" onclick="backToFolder('mailInbox','area')">Back</button>
                             <button class="reply" onclick="message_pad()">Reply</button>
                             <button class="delete" onclick="delete_mail('area','mailInbox')">Delete</button>
                         </div>
@@ -130,7 +131,7 @@
                                 <th>Subject</th>
                                 <th>Date</th>
                             </tr>
-                            <tr class="link" onclick="sentMail()">
+                            <tr class="link" onclick="loadmail('area2', 'sentMail')">
                                 <td>john@home.com</td>
                                 <td>Internet bill</td>
                                 <td>05/05/19</td>
@@ -192,12 +193,60 @@
                             </p>
                         </div>
                         <div class="actions">
+                            <button class="backbtn" onclick="backToFolder('sentMail','area2')">Back</button>
                             <button class="delete" onclick="delete_mail('area2','sentMail')">Delete</button>
                         </div>
                     </div>
                 </div>
                 <div id="drafts" class="mailcontent">
-                    <p>drafts</p>
+                    <div id="draftMail">
+                        <table>
+                            <tr>
+                                <th>To</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                            </tr>
+                            <tr class="link" onclick="loadmail('area3', 'draftMail')">
+                                <td>smith@museum.com</td>
+                                <td>School tour</td>
+                                <td>06/02/19</td>
+                            </tr>                    
+                        </table>
+                        </div>                
+                        <div id="area3">
+                            <table>
+                                <tr>
+                                    <th>To</th>
+                                    <th>Subject</th>
+                                    <th>Date</th>
+                                </tr>
+                                <tr class="link" >
+                                    <td>smith@museum.com</td>
+                                    <td>School tour</td>
+                                    <td>06/02/19</td>
+                                </tr>
+                            </table>
+                        <br>
+                            <div class="messo">
+                            <p>
+                            Hello Director,
+                            </p>
+                            <p>
+                            lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                            lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                            lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                            lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                            lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                                                    
+                            Yours,
+                                Morty
+                            </p>
+                        </div>
+                        <div class="actions">
+                            <button class="backbtn" onclick="backToFolder('draftMail','area3')">Back</button>
+                            <button class="delete" onclick="delete_mail('area3','draftMail')">Delete</button>
+                        </div>
+                    </div>
                 </div>
             </article>
         </div>
