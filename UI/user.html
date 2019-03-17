@@ -17,56 +17,144 @@
             </header>
             <aside class="sidebar">    
                 <ul class="sidenav">
-                    <li><a href="#write">Send</a></li>
-                    <li><a class="active" href="#inbox">Inbox</a></li>
-                    <li><a href="#sent">Sent</a></li>
-                    <li><a href="#drafts">Drafts</a></li>
+                    <li><a class="folders" href="#write" onclick="revealmail(event, 'write-mail')">Send</a></li>
+                    <li><a class="folders active" href="#inbox" onclick="revealmail(event, 'inbox')">Inbox</a></li>
+                    <li><a class="folders" href="#sent" onclick="revealmail(event, 'outbox')">Sent</a></li>
+                    <li><a class="folders" href="#drafts" onclick="revealmail(event, 'drafts')">Drafts</a></li>
                 </ul>
             </aside>
             <article class="content" id="plainmail">
-                <table>
-                    <tr>
-                        <th>From</th>
-                        <th>Subject</th>
-                        <th>Date</th>
-                    </tr>
-                    <tr class="link" onclick="loadmail()">
-                        <td>john@home.com</td>
-                        <td>Internet bill</td>
-                        <td>05/05/19</td>
-                    </tr>                    
-                    <tr class="link" >
-                        <td>john@home.com</td>
-                        <td>Internet bill</td>
-                        <td>05/05/19</td>
-                    </tr>                    
-                    <tr class="link" >
-                        <td>john@home.com</td>
-                        <td>Internet bill</td>
-                        <td>05/05/19</td>
-                    </tr>
-                    <tr class="link" >
-                        <td>john@home.com</td>
-                        <td>Internet bill</td>
-                        <td>05/05/19</td>
-                    </tr>                    
-                    <tr class="link" >
-                        <td>john@home.com</td>
-                        <td>Internet bill</td>
-                        <td>05/05/19</td>
-                    </tr>                    
-                    <tr class="link" >
-                        <td>john@home.com</td>
-                        <td>Internet bill</td>
-                        <td>05/05/19</td>
-                    </tr>
-                </table>
+                <div id="inbox" class="mailcontent">
+                    <div id="mailInbox">
+                        <table>
+                            <tr>
+                                <th>From</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                            </tr>
+                            <tr class="link" onclick="loadmail()">
+                                <td>john@home.com</td>
+                                <td>Internet bill</td>
+                                <td>05/05/19</td>
+                            </tr>                    
+                            <tr class="link" >
+                                <td>john@home.com</td>
+                                <td>Internet bill</td>
+                                <td>05/05/19</td>
+                            </tr>                    
+                            <tr class="link" >
+                                <td>john@home.com</td>
+                                <td>Internet bill</td>
+                                <td>05/05/19</td>
+                            </tr>
+                            <tr class="link" >
+                                <td>john@home.com</td>
+                                <td>Internet bill</td>
+                                <td>05/05/19</td>
+                            </tr>                    
+                            <tr class="link" >
+                                <td>john@home.com</td>
+                                <td>Internet bill</td>
+                                <td>05/05/19</td>
+                            </tr>                    
+                            <tr class="link" >
+                                <td>john@home.com</td>
+                                <td>Internet bill</td>
+                                <td>05/05/19</td>
+                            </tr>
+                        </table>
+                    </div>                
+                    <div id="area">
+                        <table>
+                            <tr>
+                                <th>From</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                            </tr>
+                            <tr class="link" >
+                                <td>john@home.com</td>
+                                <td>Internet bill</td>
+                                <td>05/05/19</td>
+                            </tr>
+                        </table>
+                    <br>
+                        <div class="messo">
+                        <p>
+                        Dear Morty,
+                        </p>
+                        <p>
+                        lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                        lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                        lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                        lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                        lorem ipsum doe lorem ipsum doe lorem ipsum doe lorem ipsum doe
+                                                
+                        Yours,
+                            john
+                        </p>
+                        </div>
+                        <div class="actions">
+                            <button class="reply" onclick="message_pad()">Reply</button>
+                            <button class="delete" onclick="delete_mail()">Delete</button>
+                        </div>
+                        <div id="reply">
+                            <form method="GET" action="#">
+                                <textarea></textarea>
+                                    <div class="actions">
+                                        <button class="send" onclick="send()">Send</button>
+                                        <button class="drafts" onclick="send()">Drafts</button>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>                    
+                <div id="message_deleted" style="display:none">
+                    <p>The message has been deleted</p>
+                </div>
+                </div>
+                <div id="write-mail" class="mailcontent">
+                    <p>compose</p>
+                </div>
+                <div id="outbox" class="mailcontent">
+                    <p>outbox</p>
+                </div>
+                <div id="drafts" class="mailcontent">
+                    <p>drafts</p>
+                </div>
             </article>
         </div>
 <script>
     function loadmail (){
-        document.location = 'mail.html';
+        document.getElementById("mailInbox").style.display = "none"
+        document.getElementById("area").style.display = "block"
+        document.getElementById("reply").style.display = "none"
+            
     }
+    function revealmail(event, selectedTab){
+        tabcontent = document.getElementsByClassName("mailcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("folders");
+        for (i = 0; i < tabcontent.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(selectedTab).style.display = "block";
+        event.currentTarget.className += " active";
+        
+    }
+    function message_pad() {
+        document.getElementById("reply").style.display = "block"
+        }
+    function send() {
+        document.getElementById("area").style.display = "none"
+        document.getElementById("mailInbox").style.display = "block"
+        }
+    function delete_mail() {
+        document.getElementById("area").style.display = "none"
+        document.getElementById("message_deleted").style.display = "block"
+        }
+    </script>
 </script>   
 </body>
 </html>

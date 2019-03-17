@@ -100,6 +100,76 @@ td, th {
 .link {
     cursor: pointer;
 }
+
+.mailcontent {
+    display:none;
+}
+
+#inbox {
+    display:block;
+}
+
+#area {
+    display:none;
+}
+
+.messo {
+    background: #c3bfbf;
+    height: auto;
+    line-height: normal;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+
+.actions{
+    text-align: center;
+    margin-top: 5px;
+}
+
+button{
+    font-size: 14px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 8px 15px;
+    color: white;
+}
+
+.reply {
+    background-color: #54bbff;
+    border-color: #54bbff;
+}
+
+.delete {
+    background-color: #e94022;
+    border-color: #e94022;
+}
+
+#reply {
+    display: none;
+    width: inherit;
+}
+
+textarea {
+    background-color: #c3bfbf;
+    margin-top: 5%;
+    width:100%; 
+    height:30vh; 
+    box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+}
+
+.send {
+    background-color: #7ce626;
+    border-color: #7ce626;
+}
+
+.drafts {
+    background-color: #663d35;
+    border-color: #663d35;
+}
+
 @media screen and (min-width: 500px) {
   
     .sidebar {
