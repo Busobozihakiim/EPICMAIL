@@ -109,7 +109,18 @@
                     </div>                    
                 </div>
                 <div id="write-mail" class="mailcontent">
-                    <p>compose</p>
+                    <form method="GET" action="#">
+                        <div class="receiver">
+                            <label>To</label>
+                            <input type="text">
+                        </div>                        
+                        <textarea class="write-mail"></textarea>
+                        <div class="actions">
+                            <button class="send" onclick="send()">Send</button>
+                            <button class="cancel">Cancel</button>
+                            <button class="drafts" onclick="send()">Save to Drafts</button>
+                        </div>
+                    </form>
                 </div>
                 <div id="outbox" class="mailcontent">
                     <p>outbox</p>
