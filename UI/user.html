@@ -12,7 +12,7 @@
             <header class="header">
                 <ul class="topnav">
                     <li class="logo"><a href="#">EpicMail</a></li>
-                    <li class="active"><a href="login.html">Login</a></li>
+                    <li class="active"><a href="login.html">Logout</a></li>
                 </ul>
             </header>
             <aside class="sidebar">    
@@ -21,6 +21,7 @@
                     <li><a class="folders active" href="#inbox" onclick="revealmail(event, 'inbox')">Inbox</a></li>
                     <li><a class="folders" href="#sent" onclick="revealmail(event, 'outbox')">Sent</a></li>
                     <li><a class="folders" href="#drafts" onclick="revealmail(event, 'drafts')">Drafts</a></li>
+                    <li><a class="folders" href="#groups" onclick="revealmail(event, 'groups')">Groups</a></li>
                 </ul>
             </aside>
             <article class="content" id="plainmail">
@@ -246,6 +247,39 @@
                             <button class="backbtn" onclick="backToFolder('draftMail','area3')">Back</button>
                             <button class="delete" onclick="delete_mail('area3','draftMail')">Delete</button>
                         </div>
+                    </div>
+                </div>
+                <div id="groups" class="mailcontent">
+                    <div id="groups">
+                        <div class="grp-info">
+                            <h2><u>My Groups</u></h2>
+                            <p> These are the groups you belong to </p>
+                        </div>
+                        <div class="mygroups">
+                            <button>GlobalCoders</button>
+                            <button>Meetup</button>
+                            <button>LUg</button>
+                            <button>Pykla</button>
+                        </div>
+                        <div class="grp-info">
+                            <h2><u>Create Group</u></h2>
+                            <p>Enter a new name and members to create group</p>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="fields">
+                                    <label>Group Name</label>
+                                    <input type="text">
+                                </div>
+                                <div class="fields">
+                                    <label>Add Members</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div style="text-align: center">
+                                <button class="creategroup">Create</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </article>
