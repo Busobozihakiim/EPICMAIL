@@ -1,6 +1,6 @@
-function loadmail (){
-    document.getElementById("mailInbox").style.display = "none"
-    document.getElementById("area").style.display = "block"
+function loadmail (show, hide){
+    document.getElementById(hide).style.display = "none"
+    document.getElementById(show).style.display = "block"
     document.getElementById("reply").style.display = "none"
         
 }
@@ -30,7 +30,7 @@ function delete_mail(from, to) {
     alert("Message will be deleted")
     document.getElementById(to).style.display = "block"
     }
-function sentMail(){
-    document.getElementById("sentMail").style.display = "none"
-    document.getElementById("area2").style.display = "block"            
+function backToFolder(folder, hide){
+    document.getElementById(folder).style.display = "block"
+    document.getElementById(hide).style.display = "none"
 }
