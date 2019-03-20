@@ -24,6 +24,7 @@ ul.topnav {
     margin: 0px;
     padding: 1px 0px 1px 0px;
     overflow: hidden;
+    font-family: Interstate, Arial, sans-serif;
 }
 
 ul.topnav li {
@@ -31,23 +32,21 @@ ul.topnav li {
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 33px;
 }
 
-ul.topnav li a {
+ul.topnav li a, a:visited {
     display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
-
-ul.topnav li a:hover:not(.active) {
-    background-color: #111;
+    color:#54bbff;
 }
 
 ul.topnav .active {
-    background-color: #54bbff;
+    background-color: #1664a2;;
     float: right;
+    margin: 5px;
 }
 
 ul.sidenav {

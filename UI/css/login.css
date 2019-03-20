@@ -9,11 +9,16 @@ body {
     height: 100%;
 }
 
-h1 {
-    margin-top: 75px;
+.logo {
     text-align: center;
-    color: #54bbff;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.logo a, a:visited {
+    text-decoration: none;
     font-weight: lighter;
+    color: #54bbff;
 }
 
 p {
@@ -29,11 +34,20 @@ p {
     font-family: Interstate, Arial, sans-serif;
     max-width: 350px;
     flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 50px 10px 0px 10px;
     width: 100%;
+    padding: 2% 2% 5% 2%;
+    border-radius: 2%;
+    background-color: rgba(121, 115, 115, 0.9);
 }
 
+.reset {
+    max-width: 385px;
+}
+
+form {
+    width: inherit;
+}
 .form-fields {
     margin-bottom: 25px;
     font-size: 14px;
@@ -53,6 +67,7 @@ input[type="email"], input[type="password"] {
     border: solid 1px #d6d6d6;
     height: 40px;
     font-size: 14px;
+    border-radius: 5px;
 }
 
 .login-remember_me {
@@ -80,11 +95,13 @@ button {
     background-color: #54bbff;
     border-color: #54bbff;
     color: white;
+    border-radius: 5px;
 }
 
 .offer-signup{
     margin-top: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    margin: 5px;
     align-self: center;
     display: flex;
     font-size: 15px;
@@ -95,14 +112,21 @@ button {
     text-decoration: none;
 }
 
-.cancel-reset {
+#cancel-reset {
     font-size: 14px;
     display: inline-block;
     margin-right: 10px;
-    color: red;
+    color:red;
     text-decoration: none
 }
+
 .forgot-password{
     color: black;
     font-size: 14px;
+}
+
+@media screen and (max-width: 320px) {
+    .offer-signup {
+        font-size: 12px;
+    }
 }
