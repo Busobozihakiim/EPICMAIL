@@ -120,12 +120,14 @@ button {
     width: 70%;
 }
 
+}
 @media screen and (max-width: 425px) {
 
     .signup-container {
     width: 100%;
 }
 
+}
 @media screen and (max-width: 320px) {
     .signup-container {
         width: 100%;
